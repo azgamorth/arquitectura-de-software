@@ -1,0 +1,16 @@
+public class GestorSesion {
+    private static GestorSesion instancia;
+
+    private GestorSesion() {}
+
+    public static GestorSesion getInstancia() {
+        if (instancia == null) {
+            instancia = new GestorSesion();
+        }
+        return instancia;
+    }
+
+    public void iniciarSesion(String usuario, String contraseña) {
+        System.out.println("Iniciando sesión para " + usuario);
+    }
+}
